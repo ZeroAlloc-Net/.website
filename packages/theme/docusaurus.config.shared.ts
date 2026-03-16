@@ -1,7 +1,7 @@
 export const sharedNavbar = {
   logo: {
     alt: 'ZeroAlloc',
-    src: 'img/logo.svg',
+    src: 'img/logo.png',
     href: 'https://zeroalloc.net',
   },
   items: [
