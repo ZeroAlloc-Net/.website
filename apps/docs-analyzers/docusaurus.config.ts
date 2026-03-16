@@ -11,7 +11,9 @@ const config: Config = {
   trailingSlash: false,
   onBrokenLinks: 'warn',
   i18n: { defaultLocale: 'en', locales: ['en'] },
-  markdown: { format: 'detect' },
+  markdown: { format: 'detect', mermaid: true },
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
     ...sharedThemeConfig,
