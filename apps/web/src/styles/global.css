@@ -1,0 +1,6 @@
+@import '@zeroalloc/theme';
+
+/* Page-specific overrides */
+html {
+  scroll-behavior: smooth;
+}
