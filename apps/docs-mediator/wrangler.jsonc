@@ -1,5 +1,6 @@
 {
   "name": "za-docs-mediator",
+  "compatibility_date": "2026-03-16",
   "assets": {
     "directory": "./build"
   }
