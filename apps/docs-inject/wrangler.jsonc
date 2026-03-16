@@ -1,0 +1,6 @@
+{
+  "name": "za-docs-inject",
+  "assets": {
+    "directory": "./build"
+  }
+}

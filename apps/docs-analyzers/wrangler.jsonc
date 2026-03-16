@@ -1,0 +1,6 @@
+{
+  "name": "za-docs-analyzers",
+  "assets": {
+    "directory": "./build"
+  }
+}
