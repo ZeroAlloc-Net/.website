@@ -1,19 +1,19 @@
 /**
  * ZeroAlloc brand theme — overrides Docusaurus / Infima defaults.
- * Brand: near-black bg · purple #7c3aed · cyan #00d4ff · Inter + JetBrains Mono
+ * Brand: near-black bg · purple #6366f1 · cyan #00d4ff · Inter + JetBrains Mono
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ── Light mode base (kept minimal — site defaults to dark) ── */
 :root {
-  --ifm-color-primary: #7c3aed;
-  --ifm-color-primary-dark: #6d28d9;
+  --ifm-color-primary: #6366f1;
+  --ifm-color-primary-dark: #4f46e5;
   --ifm-color-primary-darker: #6520cc;
   --ifm-color-primary-darkest: #4c16a8;
-  --ifm-color-primary-light: #8b5cf6;
-  --ifm-color-primary-lighter: #9461f7;
-  --ifm-color-primary-lightest: #a78bfa;
+  --ifm-color-primary-light: #818cf8;
+  --ifm-color-primary-lighter: #8b8df9;
+  --ifm-color-primary-lightest: #a5b4fc;
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
   --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', monospace;
   --ifm-code-font-size: 95%;
@@ -77,7 +77,7 @@
 [data-theme='dark'] .navbar__title {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
-  background: linear-gradient(135deg, #7c3aed, #00d4ff);
+  background: linear-gradient(135deg, #6366f1, #00d4ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -96,7 +96,7 @@
 
 /* ── Article headings ── */
 [data-theme='dark'] article h1 {
-  background: linear-gradient(135deg, #7c3aed, #00d4ff);
+  background: linear-gradient(135deg, #6366f1, #00d4ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
