@@ -30,6 +30,7 @@ const config: Config = {
           routeBasePath: '/',
           path: '../../repos/mediator/docs',
           sidebarPath: './sidebars.ts',
+          exclude: ['**/README.md', '**/pre-push-review*.md'],
         },
         blog: false,
         theme: {
