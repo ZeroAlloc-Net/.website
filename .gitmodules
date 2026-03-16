@@ -1,0 +1,12 @@
+[submodule "repos/analyzers"]
+	path = repos/analyzers
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Analyzers
+[submodule "repos/inject"]
+	path = repos/inject
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Inject
+[submodule "repos/mediator"]
+	path = repos/mediator
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Mediator
+[submodule "repos/valueobjects"]
+	path = repos/valueobjects
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.ValueObjects
