@@ -1,8 +1,9 @@
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.Mediator',
+  favicon: sharedFavicon,
   tagline: 'Zero-allocation source-generated mediator for .NET',
   url: 'https://mediator.zeroalloc.net',
   baseUrl: '/',

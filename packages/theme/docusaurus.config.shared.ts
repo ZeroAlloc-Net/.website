@@ -46,6 +46,8 @@ export const sharedFooter = {
   copyright: `© ${new Date().getFullYear()} ZeroAlloc-Net`,
 };
 
+export const sharedFavicon = 'img/favicon.png';
+
 export const sharedThemeConfig = {
   colorMode: {
     defaultMode: 'dark' as const,

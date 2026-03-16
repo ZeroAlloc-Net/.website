@@ -1,8 +1,9 @@
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.Inject',
+  favicon: sharedFavicon,
   tagline: 'Compile-time dependency injection via Roslyn source generator.',
   url: 'https://inject.zeroalloc.net',
   baseUrl: '/',

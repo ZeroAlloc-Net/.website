@@ -1,8 +1,9 @@
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.Analyzers',
+  favicon: sharedFavicon,
   tagline: '42+ Roslyn analyzers that detect allocation-heavy patterns at build time.',
   url: 'https://analyzers.zeroalloc.net',
   baseUrl: '/',

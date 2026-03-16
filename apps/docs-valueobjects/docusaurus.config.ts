@@ -1,8 +1,9 @@
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.ValueObjects',
+  favicon: sharedFavicon,
   tagline: 'Source-generated value objects for .NET.',
   url: 'https://valueobjects.zeroalloc.net',
   baseUrl: '/',
