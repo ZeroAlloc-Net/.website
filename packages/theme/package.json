@@ -1,0 +1,11 @@
+{
+  "name": "@zeroalloc/theme",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./index.css",
+  "exports": {
+    ".": "./index.css",
+    "./tokens": "./tokens.css",
+    "./docusaurus": "./docusaurus.config.shared.ts"
+  }
+}

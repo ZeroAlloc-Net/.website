@@ -1,0 +1,15 @@
+@import './tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--za-bg-base);
+  color: var(--za-text-primary);
+  font-family: var(--za-font-sans);
+}
+
+code, pre {
+  font-family: var(--za-font-mono);
+}
