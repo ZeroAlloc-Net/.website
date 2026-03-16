@@ -1,0 +1,6 @@
+{
+  "name": "za-web",
+  "assets": {
+    "directory": "./dist"
+  }
+}
