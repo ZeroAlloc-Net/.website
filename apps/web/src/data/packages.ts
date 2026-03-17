@@ -60,4 +60,14 @@ export const packages: Package[] = [
     headline: 'Coming soon',
     available: false,
   },
+  {
+    name: 'ZeroAlloc.Pipeline',
+    slug: 'pipeline',
+    description: 'Shared building block for pipeline-aware source generators. Compile-time behavior wiring, no reflection, no heap allocation, Native AOT compatible.',
+    docsUrl: 'https://pipeline.zeroalloc.net',
+    githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.Pipeline',
+    nugetPackage: 'ZeroAlloc.Pipeline',
+    headline: '6.4× faster at 5 behaviors, 0 B allocated',
+    available: true,
+  },
 ];

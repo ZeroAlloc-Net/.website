@@ -10,3 +10,9 @@
 [submodule "repos/valueobjects"]
 	path = repos/valueobjects
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.ValueObjects
+[submodule "repos/validation"]
+	path = repos/validation
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Validation
+[submodule "repos/pipeline"]
+	path = repos/pipeline
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Pipeline
