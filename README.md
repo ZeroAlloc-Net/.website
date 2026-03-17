@@ -11,6 +11,8 @@ Monorepo for [zeroalloc.net](https://zeroalloc.net) and all per-library document
 | `apps/docs-inject` | inject.zeroalloc.net |
 | `apps/docs-mediator` | mediator.zeroalloc.net |
 | `apps/docs-valueobjects` | valueobjects.zeroalloc.net |
+| `apps/docs-validation` | validation.zeroalloc.net |
+| `apps/docs-pipeline` | pipeline.zeroalloc.net |
 
 Library docs live in the library repos (as git submodules under `repos/`) and are read by each docs site at build time.
 
@@ -18,9 +20,11 @@ Library docs live in the library repos (as git submodules under `repos/`) and ar
 
 ```bash
 pnpm install
-pnpm dev                                        # all apps in parallel
-pnpm dev --filter @zeroalloc/web                # marketing site only
-pnpm dev --filter @zeroalloc/docs-mediator      # mediator docs only
+pnpm dev                                         # all apps in parallel
+pnpm dev --filter @zeroalloc/web                 # marketing site only
+pnpm dev --filter @zeroalloc/docs-mediator       # mediator docs only
+pnpm dev --filter @zeroalloc/docs-validation     # validation docs only
+pnpm dev --filter @zeroalloc/docs-pipeline       # pipeline docs only
 ```
 
 ## Build
@@ -40,19 +44,21 @@ git clone --recurse-submodules https://github.com/ZeroAlloc-Net/.website
 git submodule update --remote --merge
 ```
 
-## Cloudflare Pages
+## Cloudflare Workers
 
-Each app is a separate Cloudflare Pages project:
+Each app is a separate Cloudflare Workers service. Build and deploy commands configured in the Cloudflare dashboard:
 
-| Project | Build command | Output dir |
+| Service | Build command | Deploy command |
 |---|---|---|
-| `za-web` | `pnpm build --filter @zeroalloc/web` | `apps/web/dist` |
-| `za-docs-analyzers` | `pnpm build --filter @zeroalloc/docs-analyzers` | `apps/docs-analyzers/build` |
-| `za-docs-inject` | `pnpm build --filter @zeroalloc/docs-inject` | `apps/docs-inject/build` |
-| `za-docs-mediator` | `pnpm build --filter @zeroalloc/docs-mediator` | `apps/docs-mediator/build` |
-| `za-docs-valueobjects` | `pnpm build --filter @zeroalloc/docs-valueobjects` | `apps/docs-valueobjects/build` |
+| `za-web` | `pnpm build --filter @zeroalloc/web` | `cd apps/web && npx wrangler deploy` |
+| `za-docs-analyzers` | `pnpm build --filter @zeroalloc/docs-analyzers` | `cd apps/docs-analyzers && npx wrangler deploy` |
+| `za-docs-inject` | `pnpm build --filter @zeroalloc/docs-inject` | `cd apps/docs-inject && npx wrangler deploy` |
+| `za-docs-mediator` | `pnpm build --filter @zeroalloc/docs-mediator` | `cd apps/docs-mediator && npx wrangler deploy` |
+| `za-docs-valueobjects` | `pnpm build --filter @zeroalloc/docs-valueobjects` | `cd apps/docs-valueobjects && npx wrangler deploy` |
+| `za-docs-validation` | `pnpm build --filter @zeroalloc/docs-validation` | `cd apps/docs-validation && npx wrangler deploy` |
+| `za-docs-pipeline` | `pnpm build --filter @zeroalloc/docs-pipeline` | `cd apps/docs-pipeline && npx wrangler deploy` |
 
-Set `NODE_VERSION=20` as an environment variable in each project. Root directory: `/`.
+Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
 
 ## Submodule auto-update
 
