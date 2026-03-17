@@ -32,6 +32,8 @@ export const sharedFooter = {
         { label: 'Analyzers', href: 'https://analyzers.zeroalloc.net' },
         { label: 'Inject', href: 'https://inject.zeroalloc.net' },
         { label: 'Mediator', href: 'https://mediator.zeroalloc.net' },
+        { label: 'Pipeline', href: 'https://pipeline.zeroalloc.net' },
+        { label: 'Validation', href: 'https://validation.zeroalloc.net' },
         { label: 'ValueObjects', href: 'https://valueobjects.zeroalloc.net' },
       ],
     },

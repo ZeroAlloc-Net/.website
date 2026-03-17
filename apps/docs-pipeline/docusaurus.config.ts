@@ -1,10 +1,11 @@
 import path from 'path';
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.Pipeline',
-  favicon: sharedFavicon,
+  favicon: 'icon.png',
+  staticDirectories: ['static', '../../repos/pipeline/assets'],
   tagline: 'Shared building block for pipeline-aware source generators — compile-time wiring, zero allocations, Native AOT compatible',
   url: 'https://pipeline.zeroalloc.net',
   baseUrl: '/',
@@ -39,7 +40,7 @@ const config: Config = {
 
   themeConfig: {
     ...sharedThemeConfig,
-    navbar: { ...sharedNavbar, title: 'ZeroAlloc.Pipeline' },
+    navbar: { ...sharedNavbar, title: 'ZeroAlloc.Pipeline', logo: { ...sharedNavbar.logo, src: 'icon.png' } },
     footer: sharedFooter,
   },
 
