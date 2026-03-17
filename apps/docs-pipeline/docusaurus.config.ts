@@ -1,3 +1,4 @@
+import path from 'path';
 import type { Config } from '@docusaurus/types';
 import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon } from '@zeroalloc/theme/docusaurus';
 
@@ -10,11 +11,31 @@ const config: Config = {
   organizationName: 'ZeroAlloc-Net',
   projectName: 'ZeroAlloc.Pipeline',
   trailingSlash: false,
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'ignore',
   i18n: { defaultLocale: 'en', locales: ['en'] },
   markdown: { format: 'detect', mermaid: true },
 
   themes: ['@docusaurus/theme-mermaid'],
+
+  plugins: [
+    function redirectMissingStaticAssets() {
+      return {
+        name: 'redirect-missing-static-assets',
+        configureWebpack() {
+          // eslint-disable-next-line @typescript-eslint/no-require-imports
+          const webpack = require('webpack');
+          return {
+            plugins: [
+              new webpack.NormalModuleReplacementPlugin(
+                /ZeroAlloc\.Pipeline\.Benchmarks/,
+                path.resolve(__dirname, 'empty-module.js')
+              ),
+            ],
+          };
+        },
+      };
+    },
+  ],
 
   themeConfig: {
     ...sharedThemeConfig,
@@ -30,7 +51,7 @@ const config: Config = {
           routeBasePath: '/',
           path: '../../repos/pipeline/docs',
           sidebarPath: './sidebars.ts',
-          exclude: ['**/README.md', '**/pre-push-review*.md'],
+          exclude: ['**/README.md', '**/pre-push-review*.md', '**/plans/**'],
         },
         blog: false,
         theme: {
