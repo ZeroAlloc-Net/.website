@@ -53,12 +53,12 @@ export const packages: Package[] = [
   {
     name: 'ZeroAlloc.Validation',
     slug: 'validation',
-    description: 'Source-generated validation API — zero allocations, no reflection, Native AOT safe.',
+    description: 'Source-generated, attribute-based validation for .NET. Zero heap allocations on the valid path — no reflection, no runtime overhead, Native AOT safe.',
     docsUrl: 'https://validation.zeroalloc.net',
     githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.Validation',
     nugetPackage: 'ZeroAlloc.Validation',
-    headline: 'Coming soon',
-    available: false,
+    headline: '6.7 ns vs 327 ns (FluentValidation), 0 B',
+    available: true,
   },
   {
     name: 'ZeroAlloc.Pipeline',
