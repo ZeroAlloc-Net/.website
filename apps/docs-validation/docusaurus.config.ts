@@ -1,9 +1,10 @@
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.Validation',
-  favicon: sharedFavicon,
+  favicon: 'icon.png',
+  staticDirectories: ['static', '../../repos/validation/assets'],
   tagline: 'Source-generated validation for .NET — zero allocations, no reflection, Native AOT safe',
   url: 'https://validation.zeroalloc.net',
   baseUrl: '/',
@@ -18,7 +19,7 @@ const config: Config = {
 
   themeConfig: {
     ...sharedThemeConfig,
-    navbar: { ...sharedNavbar, title: 'ZeroAlloc.Validation' },
+    navbar: { ...sharedNavbar, title: 'ZeroAlloc.Validation', logo: { ...sharedNavbar.logo, src: 'icon.png' } },
     footer: sharedFooter,
   },
 
