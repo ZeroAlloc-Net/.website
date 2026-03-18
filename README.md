@@ -13,6 +13,8 @@ Monorepo for [zeroalloc.net](https://zeroalloc.net) and all per-library document
 | `apps/docs-valueobjects` | valueobjects.zeroalloc.net |
 | `apps/docs-validation` | validation.zeroalloc.net |
 | `apps/docs-pipeline` | pipeline.zeroalloc.net |
+| `apps/docs-specification` | specification.zeroalloc.net |
+| `apps/docs-results` | results.zeroalloc.net |
 
 Library docs live in the library repos (as git submodules under `repos/`) and are read by each docs site at build time.
 
@@ -25,6 +27,8 @@ pnpm dev --filter @zeroalloc/web                 # marketing site only
 pnpm dev --filter @zeroalloc/docs-mediator       # mediator docs only
 pnpm dev --filter @zeroalloc/docs-validation     # validation docs only
 pnpm dev --filter @zeroalloc/docs-pipeline       # pipeline docs only
+pnpm dev --filter @zeroalloc/docs-specification  # specification docs only
+pnpm dev --filter @zeroalloc/docs-results        # results docs only
 ```
 
 ## Build
@@ -57,6 +61,8 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-valueobjects` | `pnpm build --filter @zeroalloc/docs-valueobjects` | `cd apps/docs-valueobjects && npx wrangler deploy` |
 | `za-docs-validation` | `pnpm build --filter @zeroalloc/docs-validation` | `cd apps/docs-validation && npx wrangler deploy` |
 | `za-docs-pipeline` | `pnpm build --filter @zeroalloc/docs-pipeline` | `cd apps/docs-pipeline && npx wrangler deploy` |
+| `za-docs-specification` | `pnpm build --filter @zeroalloc/docs-specification` | `cd apps/docs-specification && npx wrangler versions upload` |
+| `za-docs-results` | `pnpm build --filter @zeroalloc/docs-results` | `cd apps/docs-results && npx wrangler versions upload` |
 
 Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
 
