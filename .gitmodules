@@ -19,3 +19,6 @@
 [submodule "repos/specification"]
 	path = repos/specification
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Specification
+[submodule "repos/results"]
+	path = repos/results
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Results
