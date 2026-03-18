@@ -87,7 +87,7 @@ export const packages: Package[] = [
     docsUrl: 'https://results.zeroalloc.net',
     githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.Results',
     nugetPackage: 'ZeroAlloc.Results',
-    headline: '8.7× faster vs CSharpFunctionalExtensions, 0 B',
+    headline: '8.7× faster vs CSharpFunctionalExtensions, 0 B allocated',
     available: true,
   },
 ];
