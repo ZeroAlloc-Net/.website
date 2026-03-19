@@ -22,5 +22,5 @@ pnpm build --filter @zeroalloc/docs-results
 
 ```bash
 pnpm build --filter @zeroalloc/docs-results
-cd apps/docs-results && npx wrangler versions upload
+cd apps/docs-results && npx wrangler deploy
 ```
