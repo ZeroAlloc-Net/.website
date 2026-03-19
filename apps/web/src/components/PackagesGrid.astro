@@ -55,17 +55,16 @@ import { packages } from '../data/packages';
     border-radius: 10px;
     padding: 1.5rem;
     display: flex; flex-direction: column; gap: 0.75rem;
-    position: relative;
   }
   .card--soon { opacity: 0.6; }
-  .card__header { display: flex; align-items: flex-start; }
-  .card__name { font-size: 1rem; font-weight: 600; color: var(--za-text-primary); margin: 0; font-family: var(--za-font-mono); padding-right: 1rem; }
+  .card__header { display: flex; align-items: center; gap: 0.5rem; flex-wrap: nowrap; }
+  .card__name { font-size: 1rem; font-weight: 600; color: var(--za-text-primary); margin: 0; font-family: var(--za-font-mono); min-width: 0; }
   .card__desc { font-size: 0.875rem; color: var(--za-text-secondary); margin: 0; line-height: 1.5; }
   .card__headline { font-size: 0.8125rem; color: var(--za-color-primary); font-family: var(--za-font-mono); margin: 0; }
   .card__links { display: flex; gap: 1rem; margin-top: auto; }
   .link { font-size: 0.875rem; color: var(--za-color-primary); text-decoration: none; font-weight: 500; }
   .link--muted { color: var(--za-text-secondary); }
-  .badge { display: inline-flex; position: absolute; top: 1rem; right: 1rem; }
+  .badge { display: inline-flex; flex-shrink: 0; }
   .badge--soon {
     font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.6rem;
     border-radius: 999px; background: var(--za-bg-elevated);
