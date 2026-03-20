@@ -9,18 +9,6 @@ import { packages } from '../data/packages';
         <div class={`card ${!pkg.available ? 'card--soon' : ''}`}>
           <div class="card__header">
             <h3 class="card__name">{pkg.name}</h3>
-            {pkg.available && (
-              <a
-                href={`https://www.nuget.org/packages/${pkg.nugetPackage}`}
-                class="badge"
-                target="_blank"
-              >
-                <img
-                  src={`https://img.shields.io/nuget/v/${pkg.nugetPackage}.svg?style=flat-square`}
-                  alt={`${pkg.name} NuGet version`}
-                />
-              </a>
-            )}
             {!pkg.available && <span class="badge badge--soon">coming soon</span>}
           </div>
           <p class="card__desc">{pkg.description}</p>
@@ -28,7 +16,19 @@ import { packages } from '../data/packages';
           {pkg.available && (
             <div class="card__links">
               <a href={pkg.docsUrl} class="link">Docs →</a>
-              <a href={pkg.githubUrl} class="link link--muted" target="_blank">GitHub</a>
+              <div class="card__links-right">
+                <a href={pkg.githubUrl} class="link link--muted" target="_blank">GitHub</a>
+                <a
+                  href={`https://www.nuget.org/packages/${pkg.nugetPackage}`}
+                  class="badge"
+                  target="_blank"
+                >
+                  <img
+                    src={`https://img.shields.io/nuget/v/${pkg.nugetPackage}.svg?style=flat-square`}
+                    alt={`${pkg.name} NuGet version`}
+                  />
+                </a>
+              </div>
             </div>
           )}
         </div>
@@ -57,14 +57,15 @@ import { packages } from '../data/packages';
     display: flex; flex-direction: column; gap: 0.75rem;
   }
   .card--soon { opacity: 0.6; }
-  .card__header { display: flex; align-items: center; gap: 0.5rem; flex-wrap: nowrap; }
-  .card__name { font-size: 1rem; font-weight: 600; color: var(--za-text-primary); margin: 0; font-family: var(--za-font-mono); min-width: 0; }
+  .card__header { display: flex; align-items: center; gap: 0.5rem; }
+  .card__name { font-size: 1rem; font-weight: 600; color: var(--za-text-primary); margin: 0; font-family: var(--za-font-mono); }
   .card__desc { font-size: 0.875rem; color: var(--za-text-secondary); margin: 0; line-height: 1.5; }
   .card__headline { font-size: 0.8125rem; color: var(--za-color-primary); font-family: var(--za-font-mono); margin: 0; }
-  .card__links { display: flex; gap: 1rem; margin-top: auto; }
+  .card__links { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+  .card__links-right { display: flex; align-items: center; gap: 0.75rem; }
   .link { font-size: 0.875rem; color: var(--za-color-primary); text-decoration: none; font-weight: 500; }
   .link--muted { color: var(--za-text-secondary); }
-  .badge { display: inline-flex; flex-shrink: 0; margin-left: auto; }
+  .badge { display: inline-flex; flex-shrink: 0; }
   .badge--soon {
     font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.6rem;
     border-radius: 999px; background: var(--za-bg-elevated);
