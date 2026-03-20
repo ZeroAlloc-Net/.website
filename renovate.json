@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "schedule": ["before 6am on monday"],
+  "timezone": "Europe/Amsterdam",
+  "labels": ["dependencies"],
+  "ignorePaths": [
+    "repos/**",
+    "**/node_modules/**"
+  ],
+  "packageRules": [
+    {
+      "description": "Group all Docusaurus packages",
+      "matchPackagePrefixes": ["@docusaurus/"],
+      "groupName": "Docusaurus"
+    },
+    {
+      "description": "Group Astro packages",
+      "matchPackagePrefixes": ["astro", "@astrojs/"],
+      "groupName": "Astro"
+    },
+    {
+      "description": "Group GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions"
+    },
+    {
+      "description": "Group React packages",
+      "matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"],
+      "groupName": "React"
+    },
+    {
+      "description": "Automerge non-major devDependency updates",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
+}
