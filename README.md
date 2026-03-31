@@ -15,6 +15,10 @@ Monorepo for [zeroalloc.net](https://zeroalloc.net) and all per-library document
 | `apps/docs-pipeline` | pipeline.zeroalloc.net |
 | `apps/docs-specification` | specification.zeroalloc.net |
 | `apps/docs-results` | results.zeroalloc.net |
+| `apps/docs-rest` | rest.zeroalloc.net |
+| `apps/docs-collections` | collections.zeroalloc.net |
+| `apps/docs-asyncevents` | asyncevents.zeroalloc.net |
+| `apps/docs-notify` | notify.zeroalloc.net |
 
 Library docs live in the library repos (as git submodules under `repos/`) and are read by each docs site at build time.
 
@@ -29,6 +33,10 @@ pnpm dev --filter @zeroalloc/docs-validation     # validation docs only
 pnpm dev --filter @zeroalloc/docs-pipeline       # pipeline docs only
 pnpm dev --filter @zeroalloc/docs-specification  # specification docs only
 pnpm dev --filter @zeroalloc/docs-results        # results docs only
+pnpm dev --filter @zeroalloc/docs-rest           # rest docs only
+pnpm dev --filter @zeroalloc/docs-collections    # collections docs only
+pnpm dev --filter @zeroalloc/docs-asyncevents    # asyncevents docs only
+pnpm dev --filter @zeroalloc/docs-notify         # notify docs only
 ```
 
 ## Build
@@ -63,6 +71,10 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-pipeline` | `pnpm build --filter @zeroalloc/docs-pipeline` | `cd apps/docs-pipeline && npx wrangler deploy` |
 | `za-docs-specification` | `pnpm build --filter @zeroalloc/docs-specification` | `cd apps/docs-specification && npx wrangler versions upload` |
 | `za-docs-results` | `pnpm build --filter @zeroalloc/docs-results` | `cd apps/docs-results && npx wrangler versions upload` |
+| `za-docs-rest` | `pnpm build --filter @zeroalloc/docs-rest` | `cd apps/docs-rest && npx wrangler versions upload` |
+| `za-docs-collections` | `pnpm build --filter @zeroalloc/docs-collections` | `cd apps/docs-collections && npx wrangler versions upload` |
+| `za-docs-asyncevents` | `pnpm build --filter @zeroalloc/docs-asyncevents` | `cd apps/docs-asyncevents && npx wrangler versions upload` |
+| `za-docs-notify` | `pnpm build --filter @zeroalloc/docs-notify` | `cd apps/docs-notify && npx wrangler versions upload` |
 
 Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
 
