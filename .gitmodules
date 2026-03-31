@@ -22,3 +22,15 @@
 [submodule "repos/results"]
 	path = repos/results
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Results
+[submodule "repos/rest"]
+	path = repos/rest
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Rest
+[submodule "repos/collections"]
+	path = repos/collections
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Collections
+[submodule "repos/asyncevents"]
+	path = repos/asyncevents
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.AsyncEvents
+[submodule "repos/notify"]
+	path = repos/notify
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Notify
