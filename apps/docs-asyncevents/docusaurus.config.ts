@@ -28,7 +28,7 @@ const config: Config = {
           routeBasePath: '/',
           path: '../../repos/asyncevents/docs',
           sidebarPath: './sidebars.ts',
-          exclude: ['**/README.md', '**/pre-push-review*.md'],
+          exclude: ['**/README.md', '**/pre-push-review*.md', '**/plans/**'],
         },
         blog: false,
         theme: { customCss: './src/css/custom.css' },
