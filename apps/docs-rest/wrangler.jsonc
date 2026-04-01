@@ -1,0 +1,7 @@
+{
+  "name": "za-docs-rest",
+  "compatibility_date": "2026-03-31",
+  "assets": {
+    "directory": "./build"
+  }
+}
