@@ -37,3 +37,9 @@
 [submodule "repos/telemetry"]
 	path = repos/telemetry
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Telemetry
+[submodule "repos/eventsourcing"]
+	path = repos/eventsourcing
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.EventSourcing
+[submodule "repos/serialisation"]
+	path = repos/serialisation
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Serialisation
