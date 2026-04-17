@@ -34,3 +34,6 @@
 [submodule "repos/notify"]
 	path = repos/notify
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Notify
+[submodule "repos/telemetry"]
+	path = repos/telemetry
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Telemetry

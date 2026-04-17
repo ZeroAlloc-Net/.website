@@ -130,4 +130,14 @@ export const packages: Package[] = [
     headline: 'Only fully-awaitable INPC, ValueTask dispatch',
     available: true,
   },
+  {
+    name: 'ZeroAlloc.Telemetry',
+    slug: 'telemetry',
+    description: 'Source-generated OpenTelemetry proxy for .NET. Annotate an interface — the Roslyn generator emits a BCL-based ActivitySource + Meter decorator. No OpenTelemetry SDK dependency, fully Native AOT safe.',
+    docsUrl: 'https://telemetry.zeroalloc.net',
+    githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.Telemetry',
+    nugetPackage: 'ZeroAlloc.Telemetry',
+    headline: 'Zero-alloc spans + metrics, no OTel SDK',
+    available: true,
+  },
 ];
