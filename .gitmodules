@@ -43,3 +43,6 @@
 [submodule "repos/serialisation"]
 	path = repos/serialisation
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Serialisation
+[submodule "repos/scheduling"]
+	path = repos/scheduling
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Scheduling
