@@ -46,3 +46,18 @@
 [submodule "repos/scheduling"]
 	path = repos/scheduling
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Scheduling
+[submodule "repos/cache"]
+	path = repos/cache
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Cache
+[submodule "repos/outbox"]
+	path = repos/outbox
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Outbox
+[submodule "repos/resilience"]
+	path = repos/resilience
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Resilience
+[submodule "repos/saga"]
+	path = repos/saga
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Saga
+[submodule "repos/statemachine"]
+	path = repos/statemachine
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.StateMachine

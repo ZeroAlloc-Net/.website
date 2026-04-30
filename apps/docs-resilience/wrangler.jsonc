@@ -1,0 +1,7 @@
+{
+  "name": "za-docs-resilience",
+  "compatibility_date": "2026-04-30",
+  "assets": {
+    "directory": "./build"
+  }
+}
