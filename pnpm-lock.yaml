@@ -98,6 +98,49 @@ importers:
         specifier: ~5.6.2
         version: 5.6.3
 
+  apps/docs-cache:
+    dependencies:
+      '@docusaurus/core':
+        specifier: 3.9.2
+        version: 3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@docusaurus/preset-classic':
+        specifier: 3.9.2
+        version: 3.9.2(@algolia/client-search@5.49.2)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(search-insights@2.17.3)(typescript@5.6.3)
+      '@docusaurus/theme-mermaid':
+        specifier: ^3.9.2
+        version: 3.9.2(@docusaurus/plugin-content-docs@3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@mdx-js/react':
+        specifier: ^3.0.0
+        version: 3.1.1(@types/react@19.2.14)(react@19.2.4)
+      '@zeroalloc/theme':
+        specifier: workspace:*
+        version: link:../../packages/theme
+      clsx:
+        specifier: ^2.0.0
+        version: 2.1.1
+      prism-react-renderer:
+        specifier: ^2.3.0
+        version: 2.4.1(react@19.2.4)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@docusaurus/module-type-aliases':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@docusaurus/tsconfig':
+        specifier: 3.9.2
+        version: 3.9.2
+      '@docusaurus/types':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      typescript:
+        specifier: ~5.6.2
+        version: 5.6.3
+
   apps/docs-collections:
     dependencies:
       '@docusaurus/core':
@@ -313,7 +356,93 @@ importers:
         specifier: ~5.6.2
         version: 5.6.3
 
+  apps/docs-outbox:
+    dependencies:
+      '@docusaurus/core':
+        specifier: 3.9.2
+        version: 3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@docusaurus/preset-classic':
+        specifier: 3.9.2
+        version: 3.9.2(@algolia/client-search@5.49.2)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(search-insights@2.17.3)(typescript@5.6.3)
+      '@docusaurus/theme-mermaid':
+        specifier: ^3.9.2
+        version: 3.9.2(@docusaurus/plugin-content-docs@3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@mdx-js/react':
+        specifier: ^3.0.0
+        version: 3.1.1(@types/react@19.2.14)(react@19.2.4)
+      '@zeroalloc/theme':
+        specifier: workspace:*
+        version: link:../../packages/theme
+      clsx:
+        specifier: ^2.0.0
+        version: 2.1.1
+      prism-react-renderer:
+        specifier: ^2.3.0
+        version: 2.4.1(react@19.2.4)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@docusaurus/module-type-aliases':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@docusaurus/tsconfig':
+        specifier: 3.9.2
+        version: 3.9.2
+      '@docusaurus/types':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      typescript:
+        specifier: ~5.6.2
+        version: 5.6.3
+
   apps/docs-pipeline:
+    dependencies:
+      '@docusaurus/core':
+        specifier: 3.9.2
+        version: 3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@docusaurus/preset-classic':
+        specifier: 3.9.2
+        version: 3.9.2(@algolia/client-search@5.49.2)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(search-insights@2.17.3)(typescript@5.6.3)
+      '@docusaurus/theme-mermaid':
+        specifier: ^3.9.2
+        version: 3.9.2(@docusaurus/plugin-content-docs@3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@mdx-js/react':
+        specifier: ^3.0.0
+        version: 3.1.1(@types/react@19.2.14)(react@19.2.4)
+      '@zeroalloc/theme':
+        specifier: workspace:*
+        version: link:../../packages/theme
+      clsx:
+        specifier: ^2.0.0
+        version: 2.1.1
+      prism-react-renderer:
+        specifier: ^2.3.0
+        version: 2.4.1(react@19.2.4)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@docusaurus/module-type-aliases':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@docusaurus/tsconfig':
+        specifier: 3.9.2
+        version: 3.9.2
+      '@docusaurus/types':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      typescript:
+        specifier: ~5.6.2
+        version: 5.6.3
+
+  apps/docs-resilience:
     dependencies:
       '@docusaurus/core':
         specifier: 3.9.2
@@ -400,6 +529,49 @@ importers:
         version: 5.6.3
 
   apps/docs-results:
+    dependencies:
+      '@docusaurus/core':
+        specifier: 3.9.2
+        version: 3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@docusaurus/preset-classic':
+        specifier: 3.9.2
+        version: 3.9.2(@algolia/client-search@5.49.2)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(search-insights@2.17.3)(typescript@5.6.3)
+      '@docusaurus/theme-mermaid':
+        specifier: ^3.9.2
+        version: 3.9.2(@docusaurus/plugin-content-docs@3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@mdx-js/react':
+        specifier: ^3.0.0
+        version: 3.1.1(@types/react@19.2.14)(react@19.2.4)
+      '@zeroalloc/theme':
+        specifier: workspace:*
+        version: link:../../packages/theme
+      clsx:
+        specifier: ^2.0.0
+        version: 2.1.1
+      prism-react-renderer:
+        specifier: ^2.3.0
+        version: 2.4.1(react@19.2.4)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@docusaurus/module-type-aliases':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@docusaurus/tsconfig':
+        specifier: 3.9.2
+        version: 3.9.2
+      '@docusaurus/types':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      typescript:
+        specifier: ~5.6.2
+        version: 5.6.3
+
+  apps/docs-saga:
     dependencies:
       '@docusaurus/core':
         specifier: 3.9.2
@@ -529,6 +701,49 @@ importers:
         version: 5.6.3
 
   apps/docs-specification:
+    dependencies:
+      '@docusaurus/core':
+        specifier: 3.9.2
+        version: 3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@docusaurus/preset-classic':
+        specifier: 3.9.2
+        version: 3.9.2(@algolia/client-search@5.49.2)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(search-insights@2.17.3)(typescript@5.6.3)
+      '@docusaurus/theme-mermaid':
+        specifier: ^3.9.2
+        version: 3.9.2(@docusaurus/plugin-content-docs@3.9.2(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3))(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.6.3)
+      '@mdx-js/react':
+        specifier: ^3.0.0
+        version: 3.1.1(@types/react@19.2.14)(react@19.2.4)
+      '@zeroalloc/theme':
+        specifier: workspace:*
+        version: link:../../packages/theme
+      clsx:
+        specifier: ^2.0.0
+        version: 2.1.1
+      prism-react-renderer:
+        specifier: ^2.3.0
+        version: 2.4.1(react@19.2.4)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@docusaurus/module-type-aliases':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@docusaurus/tsconfig':
+        specifier: 3.9.2
+        version: 3.9.2
+      '@docusaurus/types':
+        specifier: 3.9.2
+        version: 3.9.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      typescript:
+        specifier: ~5.6.2
+        version: 5.6.3
+
+  apps/docs-statemachine:
     dependencies:
       '@docusaurus/core':
         specifier: 3.9.2
@@ -6886,6 +7101,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   value-equal@1.0.1:
