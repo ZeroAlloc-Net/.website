@@ -28,6 +28,7 @@ Monorepo for [zeroalloc.net](https://zeroalloc.net) and all per-library document
 | `apps/docs-statemachine` | statemachine.zeroalloc.net |
 | `apps/docs-outbox` | outbox.zeroalloc.net |
 | `apps/docs-saga` | saga.zeroalloc.net |
+| `apps/docs-authorization` | authorization.zeroalloc.net |
 
 Library docs live in the library repos (as git submodules under `repos/`) and are read by each docs site at build time.
 
@@ -55,6 +56,7 @@ pnpm dev --filter @zeroalloc/docs-resilience     # resilience docs only
 pnpm dev --filter @zeroalloc/docs-statemachine   # statemachine docs only
 pnpm dev --filter @zeroalloc/docs-outbox         # outbox docs only
 pnpm dev --filter @zeroalloc/docs-saga           # saga docs only
+pnpm dev --filter @zeroalloc/docs-authorization  # authorization docs only
 ```
 
 ## Build
@@ -102,6 +104,7 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-statemachine` | `pnpm build --filter @zeroalloc/docs-statemachine` | `cd apps/docs-statemachine && npx wrangler deploy` |
 | `za-docs-outbox` | `pnpm build --filter @zeroalloc/docs-outbox` | `cd apps/docs-outbox && npx wrangler deploy` |
 | `za-docs-saga` | `pnpm build --filter @zeroalloc/docs-saga` | `cd apps/docs-saga && npx wrangler deploy` |
+| `za-docs-authorization` | `pnpm build --filter @zeroalloc/docs-authorization` | `cd apps/docs-authorization && npx wrangler deploy` |
 
 Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
 
