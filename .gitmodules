@@ -61,3 +61,6 @@
 [submodule "repos/statemachine"]
 	path = repos/statemachine
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.StateMachine
+[submodule "repos/authorization"]
+	path = repos/authorization
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Authorization
