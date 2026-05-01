@@ -15,7 +15,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update all submodules to latest
-        run: git submodule update --remote --merge
+        # --remote without --merge resets each submodule to its remote tip
+        # (default 'checkout' update mode). The .website repo never commits
+        # inside submodule trees, so there's nothing to preserve via merge —
+        # using --merge fails with 'unrelated histories' if any upstream
+        # repo rewrites its history (force-pushed feature branches, etc.).
+        run: git submodule update --remote --recursive
 
       - name: Commit if changed
         run: |
