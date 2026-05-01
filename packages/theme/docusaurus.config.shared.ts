@@ -1,3 +1,5 @@
+import { themes as prismThemes } from 'prism-react-renderer';
+
 export const sharedNavbar = {
   logo: {
     alt: 'ZeroAlloc',
@@ -57,6 +59,8 @@ export const sharedThemeConfig = {
     respectPrefersColorScheme: false,
   },
   prism: {
+    theme: prismThemes.oneLight,
+    darkTheme: prismThemes.vsDark,
     additionalLanguages: ['csharp', 'bash'],
   },
 };

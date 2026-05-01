@@ -7,5 +7,8 @@
     ".": "./index.css",
     "./tokens": "./tokens.css",
     "./docusaurus": "./docusaurus.config.shared.ts"
+  },
+  "peerDependencies": {
+    "prism-react-renderer": "^2.3.0"
   }
 }
