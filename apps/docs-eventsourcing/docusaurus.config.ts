@@ -32,7 +32,9 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           exclude: [
             '**/README.md',
-            '**/INDEX.md',
+            // INDEX.md is intentionally NOT excluded — it carries `slug: /` and
+            // is the document Docusaurus serves at the site root. Excluding it
+            // leaves nothing at `/` and the Worker returns 404.
             '**/ADOPTION_GUIDE.md',
             '**/DEPLOYMENT.md',
             '**/DEVELOPMENT.md',
