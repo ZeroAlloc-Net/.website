@@ -967,7 +967,11 @@ importers:
         specifier: ^6.0.5
         version: 6.0.5(@types/node@25.5.0)(jiti@1.21.7)(rollup@4.59.0)(terser@5.46.1)(typescript@5.6.3)
 
-  packages/theme: {}
+  packages/theme:
+    dependencies:
+      prism-react-renderer:
+        specifier: ^2.3.0
+        version: 2.4.1(react@19.2.4)
 
 packages:
 
