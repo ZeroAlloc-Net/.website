@@ -30,7 +30,7 @@ const config: Config = {
           routeBasePath: '/',
           path: '../../repos/mapping/docs',
           sidebarPath: './sidebars.ts',
-          exclude: ['**/README.md', '**/pre-push-review*.md', '**/plans/**'],
+          exclude: ['**/README.md', '**/pre-push-review*.md', '**/plans/**', '**/backlog.md'],
         },
         blog: false,
         theme: {
