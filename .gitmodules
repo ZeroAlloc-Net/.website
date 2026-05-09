@@ -64,3 +64,6 @@
 [submodule "repos/authorization"]
 	path = repos/authorization
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Authorization
+[submodule "repos/mapping"]
+	path = repos/mapping
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Mapping
