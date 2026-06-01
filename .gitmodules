@@ -67,3 +67,6 @@
 [submodule "repos/mapping"]
 	path = repos/mapping
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Mapping
+[submodule "repos/orm"]
+	path = repos/orm
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.ORM
