@@ -1,3 +1,26 @@
 packages:
   - "apps/*"
   - "packages/*"
+
+# Supply-chain policy, stated rather than inherited from whatever the running pnpm defaults
+# to. Three days matches the Renovate cool-off in ZeroAlloc-Net/.github, so the two agree
+# instead of guarding different windows.
+#
+# They guard different things, which is how astro@7.2.1 got in. Renovate's cool-off gates the
+# version it PROPOSES, while `pnpm install` resolves "^7.0.0" to whatever is newest at that
+# moment: a three-day-old proposal dragged in a fifteen-hour-old resolution, and the
+# Cloudflare build rejected the lockfile with ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION. With
+# this set, resolution itself skips anything younger, so the lockfile cannot be written with
+# an entry the build will later refuse.
+minimumReleaseAge: 4320
+
+# pnpm 11 will not run a dependency's build script unless it is decided here, and treats an
+# undecided one as a hard error rather than a notice.
+allowBuilds:
+  # Its postinstall fetches the platform-specific binary; esbuild cannot run without it.
+  esbuild: true
+  # Its postinstall only prints a funding message, so nothing needs it to run.
+  core-js: false
+  # Docusaurus image pipeline. Its install script resolves the libvips binary for the
+  # platform, so the package does not work without it.
+  sharp: true
