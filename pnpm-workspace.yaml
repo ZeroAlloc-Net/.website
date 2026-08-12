@@ -24,3 +24,6 @@ allowBuilds:
   # Docusaurus image pipeline. Its install script resolves the libvips binary for the
   # platform, so the package does not work without it.
   sharp: true
+minimumReleaseAgeExclude:
+  # Renovate security update: pnpm@11.8.0
+  - pnpm@11.8.0
