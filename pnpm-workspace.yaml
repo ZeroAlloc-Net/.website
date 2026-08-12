@@ -27,3 +27,5 @@ allowBuilds:
 minimumReleaseAgeExclude:
   # Renovate security update: pnpm@11.8.0
   - pnpm@11.8.0
+  # Renovate security update: turbo@2.9.14
+  - turbo@2.9.14
