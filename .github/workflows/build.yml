@@ -25,4 +25,10 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm build
+        # turbo defaults to 10 concurrent tasks. Ten Docusaurus builds, each running a
+        # client and a server webpack compilation, peak past the 16 GB an ubuntu-latest
+        # runner has. When that happens the runner is killed mid-step: the Build step
+        # ends with no conclusion, no application error is logged, and the log archive
+        # is never uploaded -- which is why these failures look like infrastructure.
+        # Four at a time matches the runner's 4 vCPUs and stays well inside memory.
+        run: pnpm exec turbo build --concurrency=4
