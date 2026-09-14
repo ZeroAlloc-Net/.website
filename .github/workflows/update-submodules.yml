@@ -5,6 +5,12 @@ on:
     types: [submodule-update]
   workflow_dispatch:
 
+# GITHUB_TOKEN defaults to read-only for this org, so without these the push
+# below fails with a 403 and the dispatch is silently lost.
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -22,9 +28,19 @@ jobs:
         # repo rewrites its history (force-pushed feature branches, etc.).
         run: git submodule update --remote --recursive
 
-      - name: Commit if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git diff --quiet && git diff --staged --quiet || \
-            git commit -am "chore: update submodules" && git push
+      # main requires a reviewed pull request, so the update is proposed rather
+      # than pushed. The action no-ops when no submodule moved, and reuses the
+      # same branch when one is already open, so repeated dispatches collapse
+      # into a single pull request instead of piling up.
+      - name: Propose the update
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore: update submodules"
+          branch: chore/update-submodules
+          delete-branch: true
+          title: "chore: update submodules"
+          body: |
+            Submodules moved to their remote tips.
+
+            Raised automatically by the `Update submodules` workflow, which runs
+            when a library repository reports a change under `docs/`.
