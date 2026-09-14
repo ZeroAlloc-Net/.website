@@ -33,7 +33,7 @@ jobs:
       # same branch when one is already open, so repeated dispatches collapse
       # into a single pull request instead of piling up.
       - name: Propose the update
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "chore: update submodules"
           branch: chore/update-submodules
