@@ -1,0 +1,135 @@
+/**
+ * ZeroAlloc brand theme — overrides Docusaurus / Infima defaults.
+ * Brand: near-black bg · purple #6366f1 · cyan #00d4ff · Inter + JetBrains Mono
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Light mode base (kept minimal — site defaults to dark) ── */
+:root {
+  --ifm-color-primary: #6366f1;
+  --ifm-color-primary-dark: #4f46e5;
+  --ifm-color-primary-darker: #6520cc;
+  --ifm-color-primary-darkest: #4c16a8;
+  --ifm-color-primary-light: #818cf8;
+  --ifm-color-primary-lighter: #8b8df9;
+  --ifm-color-primary-lightest: #a5b4fc;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', monospace;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* ── Dark mode — full brand override ── */
+[data-theme='dark'] {
+  /* Primary: cyan for links/active states */
+  --ifm-color-primary: #00d4ff;
+  --ifm-color-primary-dark: #00bfe6;
+  --ifm-color-primary-darker: #00b3d9;
+  --ifm-color-primary-darkest: #0094b3;
+  --ifm-color-primary-light: #1adcff;
+  --ifm-color-primary-lighter: #26deff;
+  --ifm-color-primary-lightest: #4de5ff;
+
+  /* Backgrounds */
+  --ifm-background-color: #0a0a0f;
+  --ifm-background-surface-color: #12121a;
+  --ifm-navbar-background-color: #12121a;
+  --ifm-footer-background-color: #12121a;
+
+  /* Text */
+  --ifm-font-color-base: #f0f0f5;
+  --ifm-color-content: #f0f0f5;
+  --ifm-color-content-secondary: #9090a8;
+  --ifm-heading-color: #f0f0f5;
+
+  /* Borders & separators */
+  --ifm-toc-border-color: #2a2a3a;
+  --ifm-color-emphasis-300: #2a2a3a;
+  --ifm-hr-border-color: #2a2a3a;
+  --ifm-table-border-color: #2a2a3a;
+
+  /* Code */
+  --ifm-code-background: #0d1117;
+  --ifm-pre-background: #0d1117;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.08);
+
+  /* Sidebar */
+  --ifm-menu-color: #9090a8;
+  --ifm-menu-color-active: #00d4ff;
+  --ifm-menu-color-background-active: rgba(0, 212, 255, 0.08);
+  --ifm-menu-color-background-hover: rgba(255, 255, 255, 0.04);
+
+  /* Navbar links */
+  --ifm-navbar-link-color: #9090a8;
+  --ifm-navbar-link-hover-color: #f0f0f5;
+
+  /* Scrollbar */
+  scrollbar-color: #2a2a3a #0a0a0f;
+}
+
+/* ── Navbar ── */
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid #2a2a3a;
+  box-shadow: none;
+}
+
+[data-theme='dark'] .navbar__title {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Footer ── */
+[data-theme='dark'] .footer {
+  border-top: 1px solid #2a2a3a;
+}
+
+/* ── Sidebar ── */
+[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+  color: #00d4ff;
+  border-radius: 4px;
+}
+
+/* ── Article headings ── */
+[data-theme='dark'] article h1 {
+  background: linear-gradient(135deg, #6366f1, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Code blocks ── */
+[data-theme='dark'] .prism-code {
+  background: #0d1117 !important;
+}
+
+[data-theme='dark'] div[class*='codeBlockContainer'] {
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ── Admonitions ── */
+[data-theme='dark'] .alert--info {
+  --ifm-alert-background-color: rgba(0, 212, 255, 0.06);
+  --ifm-alert-border-color: rgba(0, 212, 255, 0.25);
+}
+
+[data-theme='dark'] .alert--tip {
+  --ifm-alert-background-color: rgba(124, 58, 237, 0.06);
+  --ifm-alert-border-color: rgba(124, 58, 237, 0.25);
+}
+
+[data-theme='dark'] .alert--warning {
+  --ifm-alert-background-color: rgba(251, 191, 36, 0.06);
+  --ifm-alert-border-color: rgba(251, 191, 36, 0.25);
+}
+
+/* ── Tables ── */
+[data-theme='dark'] table tr:nth-child(2n) {
+  background-color: #12121a;
+}

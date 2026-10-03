@@ -30,6 +30,7 @@ Monorepo for [zeroalloc.net](https://zeroalloc.net) and all per-library document
 | `apps/docs-saga` | saga.zeroalloc.net |
 | `apps/docs-authorization` | authorization.zeroalloc.net |
 | `apps/docs-orm` | orm.zeroalloc.net |
+| `apps/docs-jev` | jev.zeroalloc.net |
 
 Library docs live in the library repos (as git submodules under `repos/`) and are read by each docs site at build time.
 
@@ -59,6 +60,7 @@ pnpm dev --filter @zeroalloc/docs-outbox         # outbox docs only
 pnpm dev --filter @zeroalloc/docs-saga           # saga docs only
 pnpm dev --filter @zeroalloc/docs-authorization  # authorization docs only
 pnpm dev --filter @zeroalloc/docs-orm            # orm docs only
+pnpm dev --filter @zeroalloc/docs-jev            # jev docs only
 ```
 
 ## Build
@@ -108,6 +110,7 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-saga` | `pnpm build --filter @zeroalloc/docs-saga` | `cd apps/docs-saga && npx wrangler deploy` |
 | `za-docs-authorization` | `pnpm build --filter @zeroalloc/docs-authorization` | `cd apps/docs-authorization && npx wrangler deploy` |
 | `za-docs-orm` | `pnpm build --filter @zeroalloc/docs-orm` | `cd apps/docs-orm && npx wrangler deploy` |
+| `za-docs-jev` | `pnpm build --filter @zeroalloc/docs-jev` | `cd apps/docs-jev && npx wrangler deploy` |
 
 Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
 
