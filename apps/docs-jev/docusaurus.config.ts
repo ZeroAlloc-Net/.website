@@ -5,7 +5,7 @@ const config: Config = {
   title: 'ZeroAlloc.Jev',
   favicon: 'icon.png',
   staticDirectories: ['static', '../../repos/jev/assets'],
-  tagline: 'Unofficial, source-generated, Native AOT-ready .NET client for TypeSafe AI\'s Jev',
+  tagline: 'Unofficial, source-generated, Native AOT-compatible .NET client for TypeSafe AI\'s Jev',
   url: 'https://jev.zeroalloc.net',
   baseUrl: '/',
   organizationName: 'ZeroAlloc-Net',

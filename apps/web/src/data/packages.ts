@@ -233,7 +233,7 @@ export const packages: Package[] = [
   {
     name: 'ZeroAlloc.Jev',
     slug: 'jev',
-    description: 'Unofficial, source-generated, Native AOT-ready .NET client for TypeSafe AI\'s Jev, the first System One model. Send a state and typed questions — the Roslyn generator emits the typed request and answer code at compile time. Not affiliated with TypeSafe AI.',
+    description: 'Unofficial, source-generated, Native AOT-compatible .NET client for TypeSafe AI\'s Jev, the first System One model. Send a state and typed questions — the Roslyn generator emits the typed request and answer code at compile time. Not affiliated with TypeSafe AI.',
     docsUrl: 'https://jev.zeroalloc.net',
     githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.Jev',
     nugetPackage: 'ZeroAlloc.Jev',
