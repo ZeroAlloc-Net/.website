@@ -70,6 +70,3 @@
 [submodule "repos/orm"]
 	path = repos/orm
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.ORM
-[submodule "repos/jev"]
-	path = repos/jev
-	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Jev
