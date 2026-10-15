@@ -31,6 +31,8 @@ Monorepo for [zeroalloc.net](https://zeroalloc.net) and all per-library document
 | `apps/docs-authorization` | authorization.zeroalloc.net | 3003 |
 | `apps/docs-mapping` | mapping.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3008 |
 | `apps/docs-orm` | orm.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3011 |
+| `apps/docs-flux` | flux.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3025 |
+| `apps/docs-templates` | templates.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3026 |
 
 Library docs live in the library repos, as git submodules under `repos/`, and each docs site reads them at build time.
 Every docs app has its own dev port, so several can run side by side.
@@ -67,10 +69,12 @@ pnpm dev --filter @zeroalloc/docs-saga          # saga docs only, http://localho
 pnpm dev --filter @zeroalloc/docs-authorization # authorization docs only, http://localhost:3003
 pnpm dev --filter @zeroalloc/docs-mapping       # mapping docs only, http://localhost:3008
 pnpm dev --filter @zeroalloc/docs-orm           # orm docs only, http://localhost:3011
+pnpm dev --filter @zeroalloc/docs-flux          # flux docs only, http://localhost:3025
+pnpm dev --filter @zeroalloc/docs-templates     # templates docs only, http://localhost:3026
 ```
 
 Pass `--filter` more than once to run several apps together. turbo refuses more than 10 persistent
-tasks by default, so running all 25 apps at once needs `pnpm dev --concurrency 26` and every
+tasks by default, so running all 27 apps at once needs `pnpm dev --concurrency 28` and every
 submodule checked out.
 
 ## Build
@@ -121,9 +125,11 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-authorization` | `pnpm build --filter @zeroalloc/docs-authorization` | `cd apps/docs-authorization && npx wrangler deploy` |
 | `za-docs-mapping` | `pnpm build --filter @zeroalloc/docs-mapping` | `cd apps/docs-mapping && npx wrangler deploy` |
 | `za-docs-orm` | `pnpm build --filter @zeroalloc/docs-orm` | `cd apps/docs-orm && npx wrangler deploy` |
+| `za-docs-flux` | `pnpm build --filter @zeroalloc/docs-flux` | `cd apps/docs-flux && npx wrangler deploy` |
+| `za-docs-templates` | `pnpm build --filter @zeroalloc/docs-templates` | `cd apps/docs-templates && npx wrangler deploy` |
 
 Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
-`mapping.zeroalloc.net` and `orm.zeroalloc.net` do not resolve yet, and `za-docs-orm` has no Workers service; see [#94](https://github.com/ZeroAlloc-Net/.website/issues/94).
+`mapping.zeroalloc.net`, `orm.zeroalloc.net`, `flux.zeroalloc.net` and `templates.zeroalloc.net` do not resolve yet, and `za-docs-orm`, `za-docs-flux` and `za-docs-templates` have no Workers service; see [#94](https://github.com/ZeroAlloc-Net/.website/issues/94).
 
 ## Submodule auto-update
 
