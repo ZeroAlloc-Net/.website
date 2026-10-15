@@ -123,7 +123,7 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-orm` | `pnpm build --filter @zeroalloc/docs-orm` | `cd apps/docs-orm && npx wrangler deploy` |
 
 Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
-`mapping.zeroalloc.net` and `orm.zeroalloc.net` do not resolve yet; see [#94](https://github.com/ZeroAlloc-Net/.website/issues/94).
+`mapping.zeroalloc.net` and `orm.zeroalloc.net` do not resolve yet, and `za-docs-orm` has no Workers service; see [#94](https://github.com/ZeroAlloc-Net/.website/issues/94).
 
 ## Submodule auto-update
 
