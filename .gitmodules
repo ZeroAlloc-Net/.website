@@ -70,3 +70,9 @@
 [submodule "repos/orm"]
 	path = repos/orm
 	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.ORM
+[submodule "repos/flux"]
+	path = repos/flux
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Flux
+[submodule "repos/templates"]
+	path = repos/templates
+	url = https://github.com/ZeroAlloc-Net/ZeroAlloc.Templates
