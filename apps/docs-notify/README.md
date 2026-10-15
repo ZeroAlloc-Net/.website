@@ -22,5 +22,5 @@ pnpm build --filter @zeroalloc/docs-notify
 
 ```bash
 pnpm build --filter @zeroalloc/docs-notify
-cd apps/docs-notify && npx wrangler versions upload
+cd apps/docs-notify && npx wrangler deploy
 ```

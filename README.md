@@ -4,62 +4,74 @@ Monorepo for [zeroalloc.net](https://zeroalloc.net) and all per-library document
 
 ## Structure
 
-| App | URL |
-|---|---|
-| `apps/web` | zeroalloc.net |
-| `apps/docs-analyzers` | analyzers.zeroalloc.net |
-| `apps/docs-inject` | inject.zeroalloc.net |
-| `apps/docs-mediator` | mediator.zeroalloc.net |
-| `apps/docs-valueobjects` | valueobjects.zeroalloc.net |
-| `apps/docs-validation` | validation.zeroalloc.net |
-| `apps/docs-pipeline` | pipeline.zeroalloc.net |
-| `apps/docs-specification` | specification.zeroalloc.net |
-| `apps/docs-results` | results.zeroalloc.net |
-| `apps/docs-rest` | rest.zeroalloc.net |
-| `apps/docs-collections` | collections.zeroalloc.net |
-| `apps/docs-asyncevents` | asyncevents.zeroalloc.net |
-| `apps/docs-notify` | notify.zeroalloc.net |
-| `apps/docs-telemetry` | telemetry.zeroalloc.net |
-| `apps/docs-eventsourcing` | eventsourcing.zeroalloc.net |
-| `apps/docs-serialisation` | serialisation.zeroalloc.net |
-| `apps/docs-scheduling` | scheduling.zeroalloc.net |
-| `apps/docs-cache` | cache.zeroalloc.net |
-| `apps/docs-resilience` | resilience.zeroalloc.net |
-| `apps/docs-statemachine` | statemachine.zeroalloc.net |
-| `apps/docs-outbox` | outbox.zeroalloc.net |
-| `apps/docs-saga` | saga.zeroalloc.net |
-| `apps/docs-authorization` | authorization.zeroalloc.net |
-| `apps/docs-orm` | orm.zeroalloc.net |
+| App | URL | Dev port |
+|---|---|---|
+| `apps/web` | zeroalloc.net | 4321 |
+| `apps/docs-analyzers` | analyzers.zeroalloc.net | 3001 |
+| `apps/docs-inject` | inject.zeroalloc.net | 3007 |
+| `apps/docs-mediator` | mediator.zeroalloc.net | 3009 |
+| `apps/docs-valueobjects` | valueobjects.zeroalloc.net | 3024 |
+| `apps/docs-validation` | validation.zeroalloc.net | 3023 |
+| `apps/docs-pipeline` | pipeline.zeroalloc.net | 3013 |
+| `apps/docs-specification` | specification.zeroalloc.net | 3020 |
+| `apps/docs-results` | results.zeroalloc.net | 3016 |
+| `apps/docs-rest` | rest.zeroalloc.net | 3015 |
+| `apps/docs-collections` | collections.zeroalloc.net | 3005 |
+| `apps/docs-asyncevents` | asyncevents.zeroalloc.net | 3002 |
+| `apps/docs-notify` | notify.zeroalloc.net | 3010 |
+| `apps/docs-telemetry` | telemetry.zeroalloc.net | 3022 |
+| `apps/docs-eventsourcing` | eventsourcing.zeroalloc.net | 3006 |
+| `apps/docs-serialisation` | serialisation.zeroalloc.net | 3019 |
+| `apps/docs-scheduling` | scheduling.zeroalloc.net | 3018 |
+| `apps/docs-cache` | cache.zeroalloc.net | 3004 |
+| `apps/docs-resilience` | resilience.zeroalloc.net | 3014 |
+| `apps/docs-statemachine` | statemachine.zeroalloc.net | 3021 |
+| `apps/docs-outbox` | outbox.zeroalloc.net | 3012 |
+| `apps/docs-saga` | saga.zeroalloc.net | 3017 |
+| `apps/docs-authorization` | authorization.zeroalloc.net | 3003 |
+| `apps/docs-mapping` | mapping.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3008 |
+| `apps/docs-orm` | orm.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3011 |
 
-Library docs live in the library repos (as git submodules under `repos/`) and are read by each docs site at build time.
+Library docs live in the library repos, as git submodules under `repos/`, and each docs site reads them at build time.
+Every docs app has its own dev port, so several can run side by side.
 
 ## Dev
 
+A docs app needs its library's submodule checked out:
+
 ```bash
 pnpm install
-pnpm dev                                         # all apps in parallel
-pnpm dev --filter @zeroalloc/web                 # marketing site only
-pnpm dev --filter @zeroalloc/docs-mediator       # mediator docs only
-pnpm dev --filter @zeroalloc/docs-validation     # validation docs only
-pnpm dev --filter @zeroalloc/docs-pipeline       # pipeline docs only
-pnpm dev --filter @zeroalloc/docs-specification  # specification docs only
-pnpm dev --filter @zeroalloc/docs-results        # results docs only
-pnpm dev --filter @zeroalloc/docs-rest           # rest docs only
-pnpm dev --filter @zeroalloc/docs-collections    # collections docs only
-pnpm dev --filter @zeroalloc/docs-asyncevents    # asyncevents docs only
-pnpm dev --filter @zeroalloc/docs-notify         # notify docs only
-pnpm dev --filter @zeroalloc/docs-telemetry      # telemetry docs only
-pnpm dev --filter @zeroalloc/docs-eventsourcing  # eventsourcing docs only
-pnpm dev --filter @zeroalloc/docs-serialisation  # serialisation docs only
-pnpm dev --filter @zeroalloc/docs-scheduling     # scheduling docs only
-pnpm dev --filter @zeroalloc/docs-cache          # cache docs only
-pnpm dev --filter @zeroalloc/docs-resilience     # resilience docs only
-pnpm dev --filter @zeroalloc/docs-statemachine   # statemachine docs only
-pnpm dev --filter @zeroalloc/docs-outbox         # outbox docs only
-pnpm dev --filter @zeroalloc/docs-saga           # saga docs only
-pnpm dev --filter @zeroalloc/docs-authorization  # authorization docs only
-pnpm dev --filter @zeroalloc/docs-orm            # orm docs only
+git submodule update --init repos/validation      # once per library you work on
+pnpm dev --filter @zeroalloc/web                # marketing site only, http://localhost:4321
+pnpm dev --filter @zeroalloc/docs-analyzers     # analyzers docs only, http://localhost:3001
+pnpm dev --filter @zeroalloc/docs-inject        # inject docs only, http://localhost:3007
+pnpm dev --filter @zeroalloc/docs-mediator      # mediator docs only, http://localhost:3009
+pnpm dev --filter @zeroalloc/docs-valueobjects  # valueobjects docs only, http://localhost:3024
+pnpm dev --filter @zeroalloc/docs-validation    # validation docs only, http://localhost:3023
+pnpm dev --filter @zeroalloc/docs-pipeline      # pipeline docs only, http://localhost:3013
+pnpm dev --filter @zeroalloc/docs-specification # specification docs only, http://localhost:3020
+pnpm dev --filter @zeroalloc/docs-results       # results docs only, http://localhost:3016
+pnpm dev --filter @zeroalloc/docs-rest          # rest docs only, http://localhost:3015
+pnpm dev --filter @zeroalloc/docs-collections   # collections docs only, http://localhost:3005
+pnpm dev --filter @zeroalloc/docs-asyncevents   # asyncevents docs only, http://localhost:3002
+pnpm dev --filter @zeroalloc/docs-notify        # notify docs only, http://localhost:3010
+pnpm dev --filter @zeroalloc/docs-telemetry     # telemetry docs only, http://localhost:3022
+pnpm dev --filter @zeroalloc/docs-eventsourcing # eventsourcing docs only, http://localhost:3006
+pnpm dev --filter @zeroalloc/docs-serialisation # serialisation docs only, http://localhost:3019
+pnpm dev --filter @zeroalloc/docs-scheduling    # scheduling docs only, http://localhost:3018
+pnpm dev --filter @zeroalloc/docs-cache         # cache docs only, http://localhost:3004
+pnpm dev --filter @zeroalloc/docs-resilience    # resilience docs only, http://localhost:3014
+pnpm dev --filter @zeroalloc/docs-statemachine  # statemachine docs only, http://localhost:3021
+pnpm dev --filter @zeroalloc/docs-outbox        # outbox docs only, http://localhost:3012
+pnpm dev --filter @zeroalloc/docs-saga          # saga docs only, http://localhost:3017
+pnpm dev --filter @zeroalloc/docs-authorization # authorization docs only, http://localhost:3003
+pnpm dev --filter @zeroalloc/docs-mapping       # mapping docs only, http://localhost:3008
+pnpm dev --filter @zeroalloc/docs-orm           # orm docs only, http://localhost:3011
 ```
+
+Pass `--filter` more than once to run several apps together. turbo refuses more than 10 persistent
+tasks by default, so running all 25 apps at once needs `pnpm dev --concurrency 26` and every
+submodule checked out.
 
 ## Build
 
@@ -75,7 +87,7 @@ pnpm build --filter @zeroalloc/web              # marketing site only
 git clone --recurse-submodules https://github.com/ZeroAlloc-Net/.website
 
 # Update all submodules to latest
-git submodule update --remote --merge
+git submodule update --remote --recursive
 ```
 
 ## Cloudflare Workers
@@ -107,12 +119,17 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-outbox` | `pnpm build --filter @zeroalloc/docs-outbox` | `cd apps/docs-outbox && npx wrangler deploy` |
 | `za-docs-saga` | `pnpm build --filter @zeroalloc/docs-saga` | `cd apps/docs-saga && npx wrangler deploy` |
 | `za-docs-authorization` | `pnpm build --filter @zeroalloc/docs-authorization` | `cd apps/docs-authorization && npx wrangler deploy` |
+| `za-docs-mapping` | `pnpm build --filter @zeroalloc/docs-mapping` | `cd apps/docs-mapping && npx wrangler deploy` |
 | `za-docs-orm` | `pnpm build --filter @zeroalloc/docs-orm` | `cd apps/docs-orm && npx wrangler deploy` |
 
 Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
+`mapping.zeroalloc.net` and `orm.zeroalloc.net` do not resolve yet; see [#94](https://github.com/ZeroAlloc-Net/.website/issues/94).
 
 ## Submodule auto-update
 
-When docs change in a library repo, a `repository_dispatch` event is sent to this repo, triggering `.github/workflows/update-submodules.yml` which bumps the submodule pointer and pushes, triggering a Cloudflare Pages rebuild.
+When docs change in a library repo, it sends a `repository_dispatch` event to this repo. That runs
+`.github/workflows/update-submodules.yml`, which moves every submodule to its remote tip and opens
+or updates the `chore: update submodules` pull request. Merging it to `main` rebuilds the Cloudflare
+Workers services.
 
 To wire up a library repo, copy `.github/workflows/trigger-website.yml.template` to `.github/workflows/trigger-website.yml` in that repo and add a `WEBSITE_DISPATCH_TOKEN` secret (fine-grained PAT with `Actions: write` on `ZeroAlloc-Net/.website`).

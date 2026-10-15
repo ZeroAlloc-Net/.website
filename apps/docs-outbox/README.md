@@ -22,5 +22,5 @@ pnpm build --filter @zeroalloc/docs-outbox
 
 ```bash
 pnpm build --filter @zeroalloc/docs-outbox
-cd apps/docs-outbox && npx wrangler versions upload
+cd apps/docs-outbox && npx wrangler deploy
 ```
