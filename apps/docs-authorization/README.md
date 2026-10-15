@@ -22,5 +22,5 @@ pnpm build --filter @zeroalloc/docs-authorization
 
 ```bash
 pnpm build --filter @zeroalloc/docs-authorization
-cd apps/docs-authorization && npx wrangler versions upload
+cd apps/docs-authorization && npx wrangler deploy
 ```

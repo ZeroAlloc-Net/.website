@@ -22,5 +22,5 @@ pnpm build --filter @zeroalloc/docs-statemachine
 
 ```bash
 pnpm build --filter @zeroalloc/docs-statemachine
-cd apps/docs-statemachine && npx wrangler versions upload
+cd apps/docs-statemachine && npx wrangler deploy
 ```

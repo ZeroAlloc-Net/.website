@@ -22,5 +22,5 @@ pnpm build --filter @zeroalloc/docs-resilience
 
 ```bash
 pnpm build --filter @zeroalloc/docs-resilience
-cd apps/docs-resilience && npx wrangler versions upload
+cd apps/docs-resilience && npx wrangler deploy
 ```

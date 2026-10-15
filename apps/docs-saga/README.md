@@ -22,5 +22,5 @@ pnpm build --filter @zeroalloc/docs-saga
 
 ```bash
 pnpm build --filter @zeroalloc/docs-saga
-cd apps/docs-saga && npx wrangler versions upload
+cd apps/docs-saga && npx wrangler deploy
 ```

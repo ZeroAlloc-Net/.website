@@ -22,5 +22,5 @@ pnpm build --filter @zeroalloc/docs-asyncevents
 
 ```bash
 pnpm build --filter @zeroalloc/docs-asyncevents
-cd apps/docs-asyncevents && npx wrangler versions upload
+cd apps/docs-asyncevents && npx wrangler deploy
 ```
