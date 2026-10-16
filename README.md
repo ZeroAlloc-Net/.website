@@ -137,4 +137,4 @@ When docs change in a library repo, it sends a `repository_dispatch` event to th
 or updates the `chore: update submodules` pull request. Merging it to `main` rebuilds the Cloudflare
 Workers services.
 
-To wire up a library repo, copy `.github/workflows/trigger-website.yml.template` to `.github/workflows/trigger-website.yml` in that repo and add a `WEBSITE_DISPATCH_TOKEN` secret (fine-grained PAT with `Actions: write` on `ZeroAlloc-Net/.website`).
+To wire up a library repo, copy `.github/workflows/trigger-website.yml.template` to `.github/workflows/trigger-website.yml` in that repo No secret is needed per repo: the workflow mints a token from the release bot GitHub App, using the org-wide `RELEASE_BOT_CLIENT_ID` variable and `RELEASE_BOT_PRIVATE_KEY` secret.
