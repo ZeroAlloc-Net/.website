@@ -29,10 +29,10 @@ Monorepo for [zeroalloc.net](https://zeroalloc.net) and all per-library document
 | `apps/docs-outbox` | outbox.zeroalloc.net | 3012 |
 | `apps/docs-saga` | saga.zeroalloc.net | 3017 |
 | `apps/docs-authorization` | authorization.zeroalloc.net | 3003 |
-| `apps/docs-mapping` | mapping.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3008 |
-| `apps/docs-orm` | orm.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3011 |
-| `apps/docs-flux` | flux.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3025 |
-| `apps/docs-templates` | templates.zeroalloc.net (not deployed yet, [#94](https://github.com/ZeroAlloc-Net/.website/issues/94)) | 3026 |
+| `apps/docs-mapping` | mapping.zeroalloc.net | 3008 |
+| `apps/docs-orm` | orm.zeroalloc.net | 3011 |
+| `apps/docs-flux` | flux.zeroalloc.net | 3025 |
+| `apps/docs-templates` | templates.zeroalloc.net | 3026 |
 
 Library docs live in the library repos, as git submodules under `repos/`, and each docs site reads them at build time.
 Every docs app has its own dev port, so several can run side by side.
@@ -128,8 +128,7 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-flux` | `pnpm build --filter @zeroalloc/docs-flux` | `cd apps/docs-flux && npx wrangler deploy` |
 | `za-docs-templates` | `pnpm build --filter @zeroalloc/docs-templates` | `cd apps/docs-templates && npx wrangler deploy` |
 
-Set `NODE_VERSION=20` as an environment variable in each service. Root directory: `/`.
-`mapping.zeroalloc.net`, `orm.zeroalloc.net`, `flux.zeroalloc.net` and `templates.zeroalloc.net` do not resolve yet, and `za-docs-orm`, `za-docs-flux` and `za-docs-templates` have no Workers service; see [#94](https://github.com/ZeroAlloc-Net/.website/issues/94).
+Root directory: `/`. The deploy command above is for `main`. Each service also has a trigger for every other branch that runs `npx wrangler versions upload` instead, so branch builds get a preview version and never replace production. No service sets build variables; builds use the Workers Builds default Node version, which satisfies `engines.node` in `package.json`.
 
 ## Submodule auto-update
 
