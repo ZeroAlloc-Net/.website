@@ -1,5 +1,5 @@
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon, requireRootPage } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.ValueObjects',
@@ -16,6 +16,7 @@ const config: Config = {
 
   themes: ['@docusaurus/theme-mermaid'],
 
+  plugins: [requireRootPage],
   themeConfig: {
     ...sharedThemeConfig,
     navbar: { ...sharedNavbar, title: 'ZeroAlloc.ValueObjects' },

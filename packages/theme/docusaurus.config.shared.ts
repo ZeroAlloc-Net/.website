@@ -64,3 +64,31 @@ export const sharedThemeConfig = {
     additionalLanguages: ['csharp', 'bash'],
   },
 };
+
+/**
+ * Fails the build when the site has no page at its root.
+ *
+ * Every docs app serves its library's docs/ folder at the site root, so the home page has to come
+ * from that folder: an index.md at its top level, or a doc with `slug: /`. Without one, Docusaurus
+ * still builds every other page and exits 0, and the deployed site answers 404 at its own address.
+ * That is how saga.zeroalloc.net returned 404 behind passing Workers Builds.
+ */
+export function requireRootPage() {
+  return {
+    name: 'zeroalloc-require-root-page',
+    async postBuild({
+      routesPaths,
+      siteConfig,
+    }: {
+      routesPaths: string[];
+      siteConfig: { baseUrl: string; url: string };
+    }) {
+      if (routesPaths.includes(siteConfig.baseUrl)) return;
+      throw new Error(
+        `${siteConfig.url}${siteConfig.baseUrl} has no page, so the site would return 404 at its root. ` +
+          "Add an index.md at the top of the library's docs/ folder, or give one doc `slug: /` " +
+          'in its front matter.',
+      );
+    },
+  };
+}
