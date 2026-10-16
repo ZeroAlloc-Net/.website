@@ -128,7 +128,7 @@ Each app is a separate Cloudflare Workers service. Build and deploy commands con
 | `za-docs-flux` | `pnpm build --filter @zeroalloc/docs-flux` | `cd apps/docs-flux && npx wrangler deploy` |
 | `za-docs-templates` | `pnpm build --filter @zeroalloc/docs-templates` | `cd apps/docs-templates && npx wrangler deploy` |
 
-Root directory: `/`. No service sets build variables; builds use the Workers Builds default Node version, which satisfies `engines.node` in `package.json`.
+Root directory: `/`. The deploy command above is for `main`. Each service also has a trigger for every other branch that runs `npx wrangler versions upload` instead, so branch builds get a preview version and never replace production. No service sets build variables; builds use the Workers Builds default Node version, which satisfies `engines.node` in `package.json`.
 
 ## Submodule auto-update
 
