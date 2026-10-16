@@ -1,6 +1,6 @@
 import path from 'path';
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig, requireRootPage } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.Pipeline',
@@ -19,6 +19,7 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
+    requireRootPage,
     function redirectMissingStaticAssets() {
       return {
         name: 'redirect-missing-static-assets',
