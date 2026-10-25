@@ -92,3 +92,13 @@ export function requireRootPage() {
     },
   };
 }
+
+/**
+ * Cloudflare Web Analytics beacon, shared by every docs app. The token is public by design.
+ * Spread into the `scripts` array of a docs app's docusaurus config.
+ */
+export const sharedAnalyticsScript = {
+  src: 'https://static.cloudflareinsights.com/beacon.min.js',
+  defer: true,
+  'data-cf-beacon': '{"token":"599551dbcc4d40eb92dd12e7c1ee824f"}',
+};
