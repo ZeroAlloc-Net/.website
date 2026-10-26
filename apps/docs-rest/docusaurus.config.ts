@@ -1,5 +1,5 @@
 import type { Config } from '@docusaurus/types';
-import { sharedNavbar, sharedFooter, sharedThemeConfig, requireRootPage } from '@zeroalloc/theme/docusaurus';
+import { sharedNavbar, sharedFooter, sharedThemeConfig, requireRootPage, sharedAnalyticsScript } from '@zeroalloc/theme/docusaurus';
 
 const config: Config = {
   title: 'ZeroAlloc.Rest',
@@ -15,6 +15,7 @@ const config: Config = {
   i18n: { defaultLocale: 'en', locales: ['en'] },
   markdown: { format: 'detect', mermaid: true },
   themes: ['@docusaurus/theme-mermaid'],
+  scripts: [sharedAnalyticsScript],
   plugins: [requireRootPage],
   themeConfig: {
     ...sharedThemeConfig,
