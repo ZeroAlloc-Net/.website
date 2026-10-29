@@ -2,6 +2,13 @@ packages:
   - "apps/*"
   - "packages/*"
 
+# One wrangler version for every app's Workers Builds deploy command. The commands run
+# `npx wrangler`, which used to fetch whatever wrangler was newest at build time, so a wrangler
+# release could change a deploy without any commit here. Each app now gets this version from
+# its own devDependencies, and Renovate bumps it in one place.
+catalog:
+  wrangler: 4.153.0
+
 # Supply-chain policy, stated rather than inherited from whatever the running pnpm defaults
 # to. Three days matches the Renovate cool-off in ZeroAlloc-Net/.github, so the two agree
 # instead of guarding different windows.
@@ -19,6 +26,9 @@ minimumReleaseAge: 4320
 allowBuilds:
   # Its postinstall fetches the platform-specific binary; esbuild cannot run without it.
   esbuild: true
+  # wrangler's runtime. Like esbuild, its postinstall checks for the platform-specific binary
+  # and downloads it when the optional dependency is missing; wrangler cannot run without it.
+  workerd: true
   # Its postinstall only prints a funding message, so nothing needs it to run.
   core-js: false
   # Docusaurus image pipeline. Its install script resolves the libvips binary for the
