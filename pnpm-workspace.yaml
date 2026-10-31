@@ -7,7 +7,7 @@ packages:
 # release could change a deploy without any commit here. Each app now gets this version from
 # its own devDependencies, and Renovate bumps it in one place.
 catalog:
-  wrangler: 4.153.0
+  wrangler: 4.154.0
 
 # Supply-chain policy, stated rather than inherited from whatever the running pnpm defaults
 # to. Three days matches the Renovate cool-off in ZeroAlloc-Net/.github, so the two agree
