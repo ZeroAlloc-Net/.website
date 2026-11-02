@@ -165,8 +165,8 @@ settings:
 catalogs:
   default:
     wrangler:
-      specifier: 4.155.0
-      version: 4.155.0
+      specifier: 4.156.0
+      version: 4.156.0
 
 importers:
 
@@ -220,7 +220,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-asyncevents:
     dependencies:
@@ -266,7 +266,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-authorization:
     dependencies:
@@ -312,7 +312,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-cache:
     dependencies:
@@ -358,7 +358,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-collections:
     dependencies:
@@ -404,7 +404,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-eventsourcing:
     dependencies:
@@ -450,7 +450,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-flux:
     dependencies:
@@ -496,7 +496,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-inject:
     dependencies:
@@ -542,7 +542,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-mapping:
     dependencies:
@@ -588,7 +588,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-mediator:
     dependencies:
@@ -634,7 +634,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-notify:
     dependencies:
@@ -680,7 +680,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-orm:
     dependencies:
@@ -726,7 +726,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-outbox:
     dependencies:
@@ -772,7 +772,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-pipeline:
     dependencies:
@@ -818,7 +818,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-resilience:
     dependencies:
@@ -864,7 +864,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-rest:
     dependencies:
@@ -910,7 +910,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-results:
     dependencies:
@@ -956,7 +956,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-saga:
     dependencies:
@@ -1002,7 +1002,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-scheduling:
     dependencies:
@@ -1048,7 +1048,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-serialisation:
     dependencies:
@@ -1094,7 +1094,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-specification:
     dependencies:
@@ -1140,7 +1140,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-statemachine:
     dependencies:
@@ -1186,7 +1186,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-telemetry:
     dependencies:
@@ -1232,7 +1232,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-templates:
     dependencies:
@@ -1278,7 +1278,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-validation:
     dependencies:
@@ -1324,7 +1324,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/docs-valueobjects:
     dependencies:
@@ -1370,7 +1370,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   apps/web:
     dependencies:
@@ -1383,7 +1383,7 @@ importers:
     devDependencies:
       wrangler:
         specifier: 'catalog:'
-        version: 4.155.0(@types/node@25.5.0)
+        version: 4.156.0(@types/node@25.5.0)
 
   packages/theme:
     dependencies:
@@ -6323,8 +6323,8 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
 
-  miniflare@5.20261023.2-beta:
-    resolution: {integrity: sha512-sXpZloQnIUe4raXXdwwqd2ioRHox9a/1B4nB2/p4JWKDwGuVgEK4DugCNgIeQf0iVuSgBItdYpodJe4iwY6SrQ==}
+  miniflare@5.20261023.3-beta:
+    resolution: {integrity: sha512-thdXzlktu5GE1o/BlmMAPeJ0Cu6Tu5LpMbRlyfRrpVvMRrhd6p52TMqcITCZZLVzt1UO92VGBkLDhLOpryUAyQ==}
     engines: {node: '>=22.0.0'}
 
   minimalistic-assert@1.0.1:
@@ -8121,8 +8121,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@4.155.0:
-    resolution: {integrity: sha512-gBKtAg2e0abQDvXPRQu611YMTd/cfAaJTOLAs/89tTxFxEeUyC260MRJRK+m3gLmQjDYWFwJv+ErwuJ/GuALpA==}
+  wrangler@4.156.0:
+    resolution: {integrity: sha512-kVLAShuLiNgE3jcrmXcymDf/iPKDPrSxACe5ueugW/33HeNB9E9CkKYchudCeBwgmsnl4k+1zt4NO7vqb/fRuQ==}
     engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
@@ -14448,7 +14448,7 @@ snapshots:
       tapable: 2.3.0
       webpack: 5.105.4(esbuild@0.28.2)
 
-  miniflare@5.20261023.2-beta(@types/node@25.5.0):
+  miniflare@5.20261023.3-beta(@types/node@25.5.0):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       sharp: 0.35.5(@types/node@25.5.0)
@@ -16601,13 +16601,13 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20261023.1
       '@cloudflare/workerd-windows-64': 1.20261023.1
 
-  wrangler@4.155.0(@types/node@25.5.0):
+  wrangler@4.156.0(@types/node@25.5.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.2(unenv@2.0.0-rc.24)(workerd@1.20261023.1)
       blake3-wasm: 2.1.5
       esbuild: 0.28.2
-      miniflare: 5.20261023.2-beta(@types/node@25.5.0)
+      miniflare: 5.20261023.3-beta(@types/node@25.5.0)
       path-to-regexp: 6.3.0
       unenv: 2.0.0-rc.24
       workerd: 1.20261023.1
