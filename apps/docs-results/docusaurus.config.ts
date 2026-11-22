@@ -5,7 +5,7 @@ const config: Config = {
   title: 'ZeroAlloc.Results',
   favicon: 'icon.png',
   staticDirectories: ['static', '../../repos/results/assets'],
-  tagline: 'Zero-allocation, no-boxing Result<T,E> library for .NET 9',
+  tagline: 'Zero-allocation, no-boxing Result<T,E> library for .NET 10+',
   url: 'https://results.zeroalloc.net',
   baseUrl: '/',
   organizationName: 'ZeroAlloc-Net',

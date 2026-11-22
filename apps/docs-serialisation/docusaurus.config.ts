@@ -4,7 +4,7 @@ import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon, requireRo
 const config: Config = {
   title: 'ZeroAlloc.Serialisation',
   favicon: sharedFavicon,
-  tagline: 'Source-generated, zero-allocation serialization for .NET 8+',
+  tagline: 'Source-generated, zero-allocation serialization for .NET 10+',
   url: 'https://serialisation.zeroalloc.net',
   baseUrl: '/',
   organizationName: 'ZeroAlloc-Net',

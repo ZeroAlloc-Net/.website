@@ -5,7 +5,7 @@ const config: Config = {
   title: 'ZeroAlloc.Specification',
   favicon: 'icon.png',
   staticDirectories: ['static', '../../repos/specification/assets'],
-  tagline: 'Source-generated, zero-allocation specification pattern for .NET 8+',
+  tagline: 'Source-generated, zero-allocation specification pattern for .NET 10+',
   url: 'https://specification.zeroalloc.net',
   baseUrl: '/',
   organizationName: 'ZeroAlloc-Net',
