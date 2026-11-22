@@ -4,7 +4,7 @@ import { sharedNavbar, sharedFooter, sharedThemeConfig, sharedFavicon, requireRo
 const config: Config = {
   title: 'ZeroAlloc.EventSourcing',
   favicon: sharedFavicon,
-  tagline: 'Zero-allocation event sourcing for .NET 8+',
+  tagline: 'Zero-allocation event sourcing for .NET 10+',
   url: 'https://eventsourcing.zeroalloc.net',
   baseUrl: '/',
   organizationName: 'ZeroAlloc-Net',

@@ -73,7 +73,7 @@ export const packages: Package[] = [
   {
     name: 'ZeroAlloc.Specification',
     slug: 'specification',
-    description: 'Source-generated, zero-allocation specification pattern for .NET 8+.',
+    description: 'Source-generated, zero-allocation specification pattern for .NET 10+.',
     docsUrl: 'https://specification.zeroalloc.net',
     githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.Specification',
     nugetPackage: 'ZeroAlloc.Specification',
@@ -83,7 +83,7 @@ export const packages: Package[] = [
   {
     name: 'ZeroAlloc.Results',
     slug: 'results',
-    description: 'Zero-allocation, no-boxing Result<T,E> library for .NET 9 with full CSharpFunctionalExtensions API parity.',
+    description: 'Zero-allocation, no-boxing Result<T,E> library for .NET 10+ with full CSharpFunctionalExtensions API parity.',
     docsUrl: 'https://results.zeroalloc.net',
     githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.Results',
     nugetPackage: 'ZeroAlloc.Results',
@@ -143,7 +143,7 @@ export const packages: Package[] = [
   {
     name: 'ZeroAlloc.EventSourcing',
     slug: 'eventsourcing',
-    description: 'Zero-allocation event sourcing for .NET 8+. Struct-based aggregate state, in-memory and SQL backends, source-generated aggregate boilerplate, optional OpenTelemetry instrumentation.',
+    description: 'Zero-allocation event sourcing for .NET 10+. Struct-based aggregate state, in-memory and SQL backends, source-generated aggregate boilerplate, optional OpenTelemetry instrumentation.',
     docsUrl: 'https://eventsourcing.zeroalloc.net',
     githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.EventSourcing',
     nugetPackage: 'ZeroAlloc.EventSourcing',
@@ -153,7 +153,7 @@ export const packages: Package[] = [
   {
     name: 'ZeroAlloc.Serialisation',
     slug: 'serialisation',
-    description: 'Source-generated, zero-allocation serialization for .NET 8+. Annotate a type — the Roslyn generator emits a sealed ISerializer<T> implementation. No reflection, no boxing, Native AOT safe.',
+    description: 'Source-generated, zero-allocation serialization for .NET 10+. Annotate a type — the Roslyn generator emits a sealed ISerializer<T> implementation. No reflection, no boxing, Native AOT safe.',
     docsUrl: 'https://serialisation.zeroalloc.net',
     githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.Serialisation',
     nugetPackage: 'ZeroAlloc.Serialisation',
@@ -243,7 +243,7 @@ export const packages: Package[] = [
   {
     name: 'ZeroAlloc.ORM',
     slug: 'orm',
-    description: 'Source-generated raw-SQL data access for .NET 10. Write the SQL in a [Query], [Command] or [StoredProcedure] attribute — the generator emits typed parameter binding and row materialization. No reflection, no LINQ provider, NativeAOT-clean.',
+    description: 'Source-generated raw-SQL data access for .NET 10+. Write the SQL in a [Query], [Command] or [StoredProcedure] attribute — the generator emits typed parameter binding and row materialization. No reflection, no LINQ provider, NativeAOT-clean.',
     docsUrl: 'https://orm.zeroalloc.net',
     githubUrl: 'https://github.com/ZeroAlloc-Net/ZeroAlloc.ORM',
     nugetPackage: 'ZeroAlloc.ORM',
